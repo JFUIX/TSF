@@ -2,13 +2,13 @@
 
 <img src="screenshot/hero.png" alt="The Shane Foundation homepage redesign" width="100%">
 
-# The Shane Foundation Homepage Redesign
+# The Shane Foundation — Homepage Redesign
 
 **Know the risk. Know the signs.**
 
-A dark, editorial homepage concept for a nonprofit raising awareness of blood clot risks linked to birth control and pregnancy.
+An independent, editorial-style nonprofit website concept focused on blood-clot awareness and accessible health information.
 
-[About](#about) · [Features](#features) · [Live demo](https://jfuix.github.io/NGO-TSF/) · [Screenshots](#screenshots) · [Run locally](#run-locally) · [Customize](#customize) · [Credits](#credits)
+[About](#about) · [Problem](#problem) · [Features](#features) · [Tech stack](#technology-stack) · [Screenshots](#screenshots) · [Live demo](https://jfuix.github.io/NGO-TSF/)
 
 </div>
 
@@ -16,59 +16,75 @@ A dark, editorial homepage concept for a nonprofit raising awareness of blood cl
 
 ## About
 
-This project is an independent homepage redesign concept for **The Shane Foundation**, focused on making information about blood clot risks related to hormonal birth control, pregnancy, and postpartum health easier to explore.
+This project is an independent homepage redesign concept for **The Shane Foundation**, intended to make information about blood-clot risks associated with hormonal birth control, pregnancy, and postpartum health easier to discover and understand.
 
-The design uses an editorial visual direction, combining deep navy backgrounds, warm cream sections, olive accents, expressive serif typography, and clear calls to action. The page brings key information, warning signs, research, Shane's story, the foundation's reach, contact, and donation pathways into one responsive experience.
+The visual direction combines deep navy, warm cream, olive accents, expressive serif typography, and clear calls to action. The experience brings risk information, warning signs, research, Shane's story, the foundation's reach, contact, and donation pathways into one responsive page.
 
 **Project type:** Nonprofit website redesign concept  
 **Role:** Design and front-end development  
-**Built with:** HTML, CSS, JavaScript, inline SVG, Google Fonts  
-**Status:** Concept / portfolio project
+**Status:** Unofficial portfolio concept
 
-> This is an unofficial portfolio concept, not the foundation's live website. Some content is reworded, map locations are illustrative placeholders, and the contact form is a front-end demonstration only.
+## Problem
+
+Health-awareness websites need to communicate serious information clearly without overwhelming visitors. This concept explores a more structured editorial experience that organizes key topics, makes warning-sign information prominent, and gives visitors clear paths to learn more or support the cause.
 
 ## Features
 
-- [x] Deep navy theme with cream sections and an olive green accent
-- [x] Elegant serif headlines (Newsreader) with clean sans body text (DM Sans)
-- [x] Frosted-glass header, topic rows, contact form and dropdown menu
-- [x] Illustrated hero, story and research cards built with inline SVG
-- [x] Three clot-risk topics: hormonal birth control, pregnancy and postpartum, and risks to a developing baby
-- [x] Warning-signs call-to-action section
-- [x] Dotted world map with highlighted sample locations and a matching list
-- [x] Story, research, contact and donation sections
-- [x] Dropdown navigation and mobile menu
-- [x] Visible keyboard focus and reduced-motion support
-- [x] Responsive layouts for desktop and mobile
-- [x] Single HTML file with no build step
-- [ ] Real photography (illustrations are used in this concept)
-- [ ] Verified operating locations (map locations are placeholders)
-- [ ] Contact form connected to a form handler
+- Responsive layouts for desktop and mobile
+- Deep navy, cream, olive, and sage visual system
+- Newsreader display typography paired with DM Sans
+- Sticky frosted-glass navigation, dropdown menu, and mobile menu
+- Custom inline-SVG illustrations and research/story cards
+- Dedicated content paths for birth-control, pregnancy, postpartum, and developing-baby risk topics
+- Warning-sign call to action
+- Dotted world map with illustrative sample locations
+- Story, research, contact, and donation sections
+- Visible keyboard focus and reduced-motion support
+- Single-page implementation with no build step
+
+## Technology Stack
+
+- **HTML5** — semantic page structure
+- **CSS3** — responsive layouts, visual system, and interactions
+- **Vanilla JavaScript** — navigation and interface behavior
+- **Inline SVG** — custom illustrations and map artwork
+- **Google Fonts** — Newsreader and DM Sans
 
 ## Screenshots
 
-<img src="screenshot/desktop-full.png" alt="Desktop view" width="100%">
+### Desktop
+
+<img src="screenshot/desktop-full.png" alt="The Shane Foundation desktop homepage" width="100%">
+
+### Mobile
 
 <p align="center">
-  <img src="screenshot/mobile-full.png" alt="Mobile view" width="300">
+  <img src="screenshot/mobile-full.png" alt="The Shane Foundation mobile homepage" width="320">
 </p>
 
-## Run locally
+## Live Demo
+
+[View the deployed website](https://jfuix.github.io/NGO-TSF/)
+
+## Run Locally
 
 ```bash
 git clone https://github.com/JFUIX/NGO---TSF.git
 cd NGO---TSF
 ```
 
-Open `index.html` in your browser. The fonts load from Google Fonts, so an internet connection gives the intended look.
+Open `index.html` in a modern browser. An internet connection is required to load the Google Fonts used in the design.
 
-## Customize
+## Project Status & Limitations
 
-- **Colors:** edit the variables at the top of the `<style>` block (`--navy`, `--cream`, `--olive`, and `--sage`).
-- **Map locations:** edit the `.places` list and matching `.pin` markers in the “Where we operate” section. The six locations shown are samples.
-- **Illustrations and photos:** replace the inline SVG artwork or the `.pic` illustrations with image elements.
-- **Contact form:** connect the form to a service such as Formspree or Netlify Forms. It currently displays a demo confirmation only.
+**Status:** Front-end concept / portfolio project.
+
+- This is not the official website of The Shane Foundation.
+- Health-related copy is presented as an awareness-site design concept and should be checked against qualified medical sources before any real-world publication.
+- Map locations are illustrative placeholders, not verified operating locations.
+- The contact form is a front-end demonstration and is not connected to a submission service.
+- Donation links and workflows require real organization details and secure payment integration before launch.
 
 ## Credits
 
-Designed and developed by [Jaffery / JFUIX](https://github.com/JFUIX). The page copy is reworded for this concept, and the map and illustrations are original. Fonts: Newsreader and DM Sans via Google Fonts.
+Designed and developed by [JFUIX](https://github.com/JFUIX). Original page layout and SVG artwork created for this concept. Fonts: Newsreader and DM Sans via Google Fonts.
