@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>[DRAFT] The Shane Foundation | Women's blood clot awareness and research</title>
+<meta name="description" content="Helping women understand blood clot risks linked to hormonal birth control and pregnancy, and backing research into prevention and treatment.">
+<meta name="theme-color" content="#12172b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --navy:#12172b; --navy-2:#191f37; --navy-3:#0d1120;
+  --cream:#eee4d4; --cream-2:#e4d8c4;
+  --olive:#55663a; --olive-hi:#66794a; --sage:#9aab6a;
+  --fg:#f1ebe0; --fg-soft:#b9bccb; --rule:rgba(241,235,224,.14);
+  --display:'Newsreader',Georgia,'Times New Roman',serif;
+  --body:'DM Sans','Helvetica Neue',Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--fg);font-family:var(--body);font-size:1.02rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spacing:-.01em;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.light{background:var(--cream);color:#1d2236;--fg:#1d2236;--fg-soft:#4b5068;--rule:rgba(29,34,54,.16)}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--body);font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;padding:.95rem 1.6rem;border-radius:3px;border:1px solid transparent;transition:background .15s,transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.sun{background:var(--olive);color:#f4efe4;border-color:var(--olive)}
+.btn.sun:hover{background:var(--olive-hi)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost::after{content:"\2192";margin-left:.7em}
+.btn.cream{background:var(--cream);color:#1d2236;border-color:var(--cream)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(18,23,43,.72);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-weight:500;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:.7rem}
+.logo i{width:34px;height:34px;border-radius:50%;border:1px solid var(--fg);display:grid;place-items:center;font-style:normal;font-size:1.05rem;line-height:1}
+nav ul{list-style:none;display:flex;gap:1.7rem;margin:0;padding:0;align-items:center}
+nav a{font-size:.9rem;text-decoration:none}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
+nav .btn{padding:.65rem 1.1rem;font-size:.72rem}
+nav .btn:hover{text-decoration:none}
+.has-sub{position:relative}
+.has-sub>button{font:inherit;font-size:.9rem;background:none;border:0;color:inherit;cursor:pointer;padding:0}
+.sub{position:absolute;top:100%;left:-12px;margin-top:16px;background:rgba(25,31,55,.92);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid var(--rule);border-radius:6px;padding:.5rem;display:none;flex-direction:column;min-width:250px}
+.has-sub.open .sub{display:flex}
+.sub a{padding:.55rem .8rem;border-radius:4px;display:block}
+.sub a:hover{background:rgba(255,255,255,.07);text-decoration:none}
+.menu-btn{display:none;font:inherit;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;background:none;border:1px solid var(--fg);color:inherit;border-radius:3px;padding:.45rem .9rem;cursor:pointer}
+
+/* hero */
+.hero{padding:clamp(56px,8vw,112px) 0 clamp(64px,9vw,120px);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(2.7rem,6.2vw,5rem);max-width:10ch}
+.hero h1 span{color:var(--sage);display:block}
+.hero p{max-width:36ch;font-size:1.1rem;margin:1.6rem 0 2.2rem;color:var(--fg-soft)}
+.hero .actions{display:flex;gap:.9rem;flex-wrap:wrap}
+.art{position:relative;display:block}
+.art svg{display:block;width:100%;height:auto}
+.art .tag{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);white-space:nowrap;font-family:var(--display);font-style:italic;font-size:1.05rem;padding:.8rem 1.2rem;border-radius:6px;background:rgba(13,17,32,.55);border:1px solid var(--rule);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+
+/* mission */
+.mission{padding:clamp(56px,8vw,104px) 0}
+.mission .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(24px,5vw,72px);align-items:start}
+.mission h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.mission p{margin:0;font-family:var(--display);font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.4}
+
+/* risks */
+.risks{padding:clamp(56px,8vw,104px) 0}
+.risks h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:2rem;max-width:22ch}
+.risk{display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:center;padding:1.7rem clamp(18px,3vw,32px);margin-bottom:12px;text-decoration:none;background:rgba(255,255,255,.04);border:1px solid var(--rule);border-radius:6px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:border-color .2s,background .2s}
+.risk h3{font-size:clamp(1.4rem,2.6vw,2rem)}
+.risk span{font-size:.75rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sage)}
+.risk span::after{content:"\2192";margin-left:.7em}
+.risk:hover{border-color:var(--sage);background:rgba(154,171,106,.08)}
+
+/* warning band */
+.warn{position:relative;overflow:hidden;background:var(--olive);color:#f4efe4;padding:clamp(48px,7vw,88px) 0}
+.warn .arcs{position:absolute;right:-90px;top:50%;width:440px;transform:translateY(-50%);opacity:.22;pointer-events:none}
+.warn .wrap{position:relative;display:flex;justify-content:space-between;gap:2rem;align-items:center;flex-wrap:wrap}
+.warn h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:14ch}
+.warn p{margin:.8rem 0 0;font-size:1.1rem;max-width:34ch;color:#e3e8d3}
+
+
+/* map */
+.reach{background:var(--navy-2);padding:clamp(56px,8vw,104px) 0;border-top:1px solid var(--rule)}
+.reach h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:2rem}
+.reach-grid{display:grid;grid-template-columns:1.8fr 1fr;gap:24px;align-items:stretch}
+.map{padding:clamp(16px,3vw,32px);background:rgba(255,255,255,.04);border:1px solid var(--rule);border-radius:6px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.map svg{display:block;width:100%;height:auto}
+.map .land{fill:none;stroke:rgba(154,171,106,.5);stroke-width:4.4;stroke-linecap:round}
+.pin circle{fill:#f1ebe0}
+.pin .ring{fill:rgba(154,171,106,.22);stroke:var(--sage);stroke-width:1.5;transition:r .2s}
+.pin.on .ring{r:20;fill:rgba(154,171,106,.4)}
+.map .small{margin:.9rem 0 0}
+.places{list-style:none;margin:0;padding:0;display:grid;gap:10px;align-content:start}
+.places li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.05rem 1.3rem;background:rgba(255,255,255,.04);border:1px solid var(--rule);border-radius:6px;transition:border-color .2s,background .2s}
+.places li:hover{border-color:var(--sage);background:rgba(154,171,106,.08)}
+.places strong{font-family:var(--display);font-weight:500;font-size:1.25rem}
+.places span{color:var(--fg-soft);font-size:.85rem}
+
+/* story + research */
+.two{padding:clamp(56px,8vw,104px) 0}
+.two .wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{background:var(--cream-2);border:1px solid var(--rule);border-radius:6px;padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:1rem;align-items:flex-start;justify-content:space-between;min-height:260px}
+.pic{align-self:stretch;width:100%;height:150px;border-radius:4px;display:block}
+.panel h2{font-size:clamp(1.8rem,3vw,2.3rem)}
+.panel p{margin:0;color:var(--fg-soft)}
+
+/* contact */
+.contact{padding:clamp(56px,8vw,104px) 0}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(24px,5vw,72px);align-items:start}
+.contact h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.contact p{color:var(--fg-soft);max-width:30ch}
+form{display:grid;gap:1rem;padding:clamp(22px,4vw,36px);background:rgba(255,255,255,.04);border:1px solid var(--rule);border-radius:6px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+label{font-weight:700;font-size:.85rem;display:grid;gap:.4rem}
+input,textarea{font:inherit;color:var(--fg);background:rgba(255,255,255,.05);border:1px solid rgba(241,235,224,.22);border-radius:4px;padding:.8rem 1rem;width:100%}
+input:focus,textarea:focus{border-color:var(--sage);outline:none;box-shadow:0 0 0 3px rgba(154,171,106,.28)}
+textarea{min-height:140px;resize:vertical}
+.small{font-size:.82rem;color:var(--fg-soft);margin:0}
+#sent{display:none;font-weight:700;padding:1rem 1.2rem;border-radius:4px;background:var(--olive);color:#f4efe4}
+
+/* donate */
+.donate{position:relative;overflow:hidden;background:var(--navy-2);border-top:1px solid var(--rule);padding:clamp(56px,8vw,96px) 0 clamp(140px,16vw,200px);text-align:center}
+.donate .hills{position:absolute;left:0;bottom:0;width:100%;height:clamp(90px,14vw,150px);pointer-events:none}
+.donate .wrap{position:relative}
+.donate h2{font-size:clamp(2.1rem,5.4vw,4rem);margin-bottom:1.8rem}
+.donate .row{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+
+/* footer */
+footer{background:var(--navy-3);padding:48px 0 56px;font-size:.9rem;color:var(--fg-soft)}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem}
+footer strong{font-family:var(--display);font-weight:500;font-size:1.15rem;color:var(--fg)}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem}
+footer p{margin:.6rem 0 0}
+
+@media(max-width:820px){
+  .menu-btn{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:#12172b;border-bottom:1px solid var(--rule);display:none;padding:12px 24px 24px}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:flex-start;gap:1rem}
+  .sub{position:static;display:flex;border:0;padding:.2rem 0 0 .8rem;margin:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .has-sub>button{pointer-events:none}
+  .reach-grid,.hero .wrap,.mission .wrap,.two .wrap,.contact .wrap,footer .cols{grid-template-columns:1fr}
+  .art{max-width:340px;width:100%;margin:0 auto}
+  .art .tag{font-size:.9rem;padding:.6rem .9rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.risk{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar" style="position:relative">
+    <a class="logo" href="#top"><i aria-hidden="true">S</i>The Shane Foundation</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li class="has-sub" id="sub">
+          <button aria-expanded="false" aria-haspopup="true">Blood clots in women</button>
+          <div class="sub">
+            <a href="https://shanefoundation.org/birth-control-clot-risks">Birth control clot risks</a>
+            <a href="https://shanefoundation.org/pregnancy-clot-risks">Pregnancy clot risks</a>
+            <a href="https://shanefoundation.org/fetal-health-clot-risks">Fetal health clot risks</a>
+          </div>
+        </li>
+        <li><a href="https://shanefoundation.org/research">Research</a></li>
+        <li><a href="https://shanefoundation.org/shanes-story">Shane's story</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn cream" href="https://givebutter.com/vVBrS0">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Know the risk. <span>Know the signs.</span></h1>
+        <p>Helping women understand clot risks around birth control and pregnancy, and backing the research that could prevent them.</p>
+        <div class="actions">
+          <a class="btn sun" href="https://shanefoundation.org/pregnancy-clot-risks">Check your risk</a>
+          <a class="btn ghost" href="https://shanefoundation.org/warning-signs">Learn the warning signs</a>
+        </div>
+      </div>
+      <div class="art">
+      <svg viewBox="0 0 440 520" role="img" aria-label="Illustration of a sun rising over layered green hills inside an arch">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1120"/><stop offset=".5" stop-color="#2b3a2b"/><stop offset="1" stop-color="#c9b98a"/></linearGradient>
+          <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#eee4d4" stop-opacity=".55"/><stop offset="1" stop-color="#eee4d4" stop-opacity="0"/></radialGradient>
+          <clipPath id="arch"><path d="M30 520V230A190 190 0 0 1 410 230V520Z"/></clipPath>
+        </defs>
+        <path d="M10 520V230A210 210 0 0 1 430 230V520" fill="none" stroke="#9aab6a" stroke-opacity=".4"/>
+        <g clip-path="url(#arch)">
+          <rect x="30" y="30" width="380" height="490" fill="url(#sky)"/><circle cx="120" cy="120" r="1.6" fill="#eee4d4" opacity="0.7"/><circle cx="300" cy="95" r="1.4" fill="#eee4d4" opacity="0.6"/><circle cx="210" cy="70" r="1.8" fill="#eee4d4" opacity="0.8"/><circle cx="340" cy="170" r="1.2" fill="#eee4d4" opacity="0.5"/><circle cx="95" cy="200" r="1.2" fill="#eee4d4" opacity="0.5"/><circle cx="255" cy="140" r="1.2" fill="#eee4d4" opacity="0.5"/><circle cx="160" cy="160" r="1" fill="#eee4d4" opacity="0.4"/><circle cx="370" cy="120" r="1" fill="#eee4d4" opacity="0.4"/>
+          <circle cx="220" cy="320" r="150" fill="url(#glow)"/>
+          <circle cx="220" cy="320" r="62" fill="#eee4d4"/>
+          <path d="M30 370C110 305 170 340 230 348S360 318 410 346V520H30Z" fill="#66794a"/>
+          <path d="M30 415C90 378 170 402 240 406S360 386 410 400V520H30Z" fill="#46562f"/>
+          <path d="M30 465C110 435 190 460 260 455S370 445 410 460V520H30Z" fill="#26301f"/>
+        </g>
+      </svg>
+      <div class="tag">In memory of Shane Gold Burwick</div></div>
+    </div>
+  </section>
+
+  <section class="mission light" aria-labelledby="mission-h">
+    <div class="wrap">
+      <h2 id="mission-h">Our mission</h2>
+      <p>We help women recognise and prevent dangerous blood clots tied to hormonal birth control and pregnancy, and we back research into better ways to treat them.</p>
+    </div>
+  </section>
+
+  <section class="risks" aria-labelledby="risks-h">
+    <div class="wrap">
+      <h2 id="risks-h">Three clot risks that affect women in particular</h2>
+      <a class="risk" href="https://shanefoundation.org/birth-control-clot-risks">
+        <h3>Hormonal birth control</h3><span>Learn more</span>
+      </a>
+      <a class="risk" href="https://shanefoundation.org/pregnancy-clot-risks">
+        <h3>Pregnancy and the postpartum period</h3><span>Learn more</span>
+      </a>
+      <a class="risk" href="https://shanefoundation.org/fetal-health-clot-risks">
+        <h3>Risks to a developing baby</h3><span>Learn more</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="warn" aria-labelledby="warn-h">
+    <svg class="arcs" viewBox="0 0 400 400" aria-hidden="true" fill="none" stroke="#eee4d4" stroke-width="1.5"><circle cx="200" cy="200" r="190"/><circle cx="200" cy="200" r="145"/><circle cx="200" cy="200" r="100"/><circle cx="200" cy="200" r="55"/></svg>
+    <div class="wrap">
+      <div>
+        <h2 id="warn-h">Spot a clot early</h2>
+        <p>Knowing what to look for can save a life.</p>
+      </div>
+      <a class="btn cream" href="https://shanefoundation.org/warning-signs">Read the warning signs</a>
+    </div>
+  </section>
+
+  <section class="reach" aria-labelledby="reach-h">
+    <div class="wrap">
+      <h2 id="reach-h">Where we operate</h2>
+      <div class="reach-grid">
+        <div class="map">
+          <svg viewBox="0 0 1000 383" role="img" aria-label="World map with six marked locations: Los Angeles, New York, London, Nairobi, Mumbai and Sydney"><path class="land" d="M253 3h0M260 3h0M267 3h0M274 3h0M281 3h0M288 3h0M295 3h0M302 3h0M309 3h0M316 3h0M323 3h0M330 3h0M337 3h0M344 3h0M351 3h0M358 3h0M365 3h0M372 3h0M378 3h0M385 3h0M392 3h0M399 3h0M406 3h0M413 3h0M420 3h0M427 3h0M434 3h0M441 3h0M448 3h0M267 10h0M274 10h0M281 10h0M323 10h0M330 10h0M337 10h0M344 10h0M351 10h0M358 10h0M365 10h0M372 10h0M378 10h0M385 10h0M392 10h0M399 10h0M406 10h0M413 10h0M420 10h0M427 10h0M434 10h0M441 10h0M774 10h0M781 10h0M344 17h0M351 17h0M358 17h0M365 17h0M372 17h0M378 17h0M385 17h0M392 17h0M399 17h0M406 17h0M413 17h0M420 17h0M427 17h0M434 17h0M441 17h0M740 17h0M747 17h0M753 17h0M760 17h0M767 17h0M774 17h0M781 17h0M788 17h0M795 17h0M802 17h0M809 17h0M184 24h0M191 24h0M198 24h0M205 24h0M212 24h0M240 24h0M253 24h0M260 24h0M267 24h0M274 24h0M281 24h0M288 24h0M295 24h0M351 24h0M358 24h0M365 24h0M372 24h0M378 24h0M385 24h0M392 24h0M399 24h0M406 24h0M413 24h0M420 24h0M427 24h0M434 24h0M698 24h0M705 24h0M712 24h0M719 24h0M726 24h0M733 24h0M740 24h0M747 24h0M753 24h0M760 24h0M767 24h0M774 24h0M781 24h0M788 24h0M795 24h0M802 24h0M809 24h0M816 24h0M823 24h0M830 24h0M837 24h0M844 24h0M851 24h0M858 24h0M865 24h0M872 24h0M878 24h0M885 24h0M892 24h0M899 24h0M52 31h0M59 31h0M66 31h0M73 31h0M80 31h0M87 31h0M94 31h0M101 31h0M108 31h0M115 31h0M122 31h0M128 31h0M135 31h0M142 31h0M149 31h0M156 31h0M163 31h0M226 31h0M233 31h0M240 31h0M247 31h0M253 31h0M260 31h0M267 31h0M274 31h0M281 31h0M288 31h0M295 31h0M302 31h0M309 31h0M351 31h0M358 31h0M365 31h0M372 31h0M378 31h0M385 31h0M392 31h0M399 31h0M406 31h0M413 31h0M420 31h0M552 31h0M559 31h0M566 31h0M573 31h0M580 31h0M587 31h0M594 31h0M691 31h0M698 31h0M705 31h0M712 31h0M719 31h0M726 31h0M733 31h0M740 31h0M747 31h0M753 31h0M760 31h0M767 31h0M774 31h0M781 31h0M788 31h0M795 31h0M802 31h0M809 31h0M816 31h0M823 31h0M830 31h0M837 31h0M844 31h0M851 31h0M858 31h0M865 31h0M872 31h0M878 31h0M885 31h0M892 31h0M899 31h0M906 31h0M913 31h0M920 31h0M927 31h0M934 31h0M941 31h0M948 31h0M955 31h0M962 31h0M969 31h0M976 31h0M983 31h0M38 37h0M45 37h0M52 37h0M59 37h0M66 37h0M73 37h0M80 37h0M87 37h0M94 37h0M101 37h0M108 37h0M115 37h0M122 37h0M128 37h0M135 37h0M142 37h0M149 37h0M156 37h0M163 37h0M170 37h0M177 37h0M184 37h0M191 37h0M198 37h0M205 37h0M212 37h0M219 37h0M226 37h0M233 37h0M240 37h0M247 37h0M253 37h0M260 37h0M267 37h0M274 37h0M281 37h0M288 37h0M295 37h0M302 37h0M309 37h0M316 37h0M323 37h0M358 37h0M365 37h0M372 37h0M378 37h0M385 37h0M392 37h0M399 37h0M406 37h0M538 37h0M545 37h0M552 37h0M559 37h0M566 37h0M573 37h0M580 37h0M587 37h0M594 37h0M601 37h0M608 37h0M615 37h0M622 37h0M628 37h0M635 37h0M642 37h0M649 37h0M656 37h0M663 37h0M670 37h0M677 37h0M684 37h0M691 37h0M698 37h0M705 37h0M712 37h0M719 37h0M726 37h0M733 37h0M740 37h0M747 37h0M753 37h0M760 37h0M767 37h0M774 37h0M781 37h0M788 37h0M795 37h0M802 37h0M809 37h0M816 37h0M823 37h0M830 37h0M837 37h0M844 37h0M851 37h0M858 37h0M865 37h0M872 37h0M878 37h0M885 37h0M892 37h0M899 37h0M906 37h0M913 37h0M920 37h0M927 37h0M934 37h0M941 37h0M948 37h0M955 37h0M962 37h0M969 37h0M976 37h0M983 37h0M990 37h0M997 37h0M45 44h0M52 44h0M59 44h0M66 44h0M73 44h0M80 44h0M87 44h0M94 44h0M101 44h0M108 44h0M115 44h0M122 44h0M128 44h0M135 44h0M142 44h0M149 44h0M156 44h0M163 44h0M170 44h0M177 44h0M184 44h0M191 44h0M198 44h0M205 44h0M212 44h0M219 44h0M226 44h0M233 44h0M240 44h0M247 44h0M281 44h0M288 44h0M295 44h0M302 44h0M309 44h0M365 44h0M372 44h0M378 44h0M385 44h0M392 44h0M399 44h0M441 44h0M448 44h0M531 44h0M538 44h0M545 44h0M552 44h0M566 44h0M573 44h0M580 44h0M587 44h0M594 44h0M601 44h0M608 44h0M615 44h0M622 44h0M628 44h0M635 44h0M642 44h0M649 44h0M656 44h0M663 44h0M670 44h0M677 44h0M684 44h0M691 44h0M698 44h0M705 44h0M712 44h0M719 44h0M726 44h0M733 44h0M740 44h0M747 44h0M753 44h0M760 44h0M767 44h0M774 44h0M781 44h0M788 44h0M795 44h0M802 44h0M809 44h0M816 44h0M823 44h0M830 44h0M837 44h0M844 44h0M851 44h0M858 44h0M865 44h0M872 44h0M878 44h0M885 44h0M892 44h0M899 44h0M906 44h0M913 44h0M920 44h0M927 44h0M934 44h0M941 44h0M948 44h0M955 44h0M962 44h0M969 44h0M976 44h0M983 44h0M45 51h0M52 51h0M59 51h0M66 51h0M73 51h0M80 51h0M87 51h0M94 51h0M101 51h0M108 51h0M115 51h0M122 51h0M128 51h0M135 51h0M142 51h0M149 51h0M156 51h0M163 51h0M170 51h0M177 51h0M184 51h0M191 51h0M198 51h0M205 51h0M212 51h0M219 51h0M226 51h0M233 51h0M240 51h0M288 51h0M378 51h0M385 51h0M517 51h0M524 51h0M531 51h0M538 51h0M545 51h0M566 51h0M573 51h0M580 51h0M587 51h0M594 51h0M601 51h0M608 51h0M615 51h0M622 51h0M628 51h0M635 51h0M642 51h0M649 51h0M656 51h0M663 51h0M670 51h0M677 51h0M684 51h0M691 51h0M698 51h0M705 51h0M712 51h0M719 51h0M726 51h0M733 51h0M740 51h0M747 51h0M753 51h0M760 51h0M767 51h0M774 51h0M781 51h0M788 51h0M795 51h0M802 51h0M809 51h0M816 51h0M823 51h0M830 51h0M837 51h0M844 51h0M851 51h0M858 51h0M865 51h0M872 51h0M878 51h0M885 51h0M892 51h0M899 51h0M906 51h0M913 51h0M920 51h0M927 51h0M934 51h0M941 51h0M948 51h0M955 51h0M962 51h0M59 58h0M66 58h0M73 58h0M122 58h0M128 58h0M135 58h0M142 58h0M149 58h0M156 58h0M163 58h0M170 58h0M177 58h0M184 58h0M191 58h0M198 58h0M205 58h0M212 58h0M219 58h0M226 58h0M233 58h0M240 58h0M288 58h0M295 58h0M302 58h0M309 58h0M316 58h0M517 58h0M524 58h0M531 58h0M538 58h0M545 58h0M573 58h0M580 58h0M587 58h0M594 58h0M601 58h0M608 58h0M615 58h0M622 58h0M628 58h0M635 58h0M642 58h0M649 58h0M656 58h0M663 58h0M670 58h0M677 58h0M684 58h0M691 58h0M698 58h0M705 58h0M712 58h0M719 58h0M726 58h0M733 58h0M740 58h0M747 58h0M753 58h0M760 58h0M767 58h0M774 58h0M781 58h0M788 58h0M795 58h0M802 58h0M809 58h0M816 58h0M823 58h0M830 58h0M837 58h0M844 58h0M851 58h0M858 58h0M865 58h0M872 58h0M878 58h0M885 58h0M892 58h0M899 58h0M906 58h0M913 58h0M920 58h0M927 58h0M941 58h0M948 58h0M52 65h0M128 65h0M135 65h0M142 65h0M149 65h0M156 65h0M163 65h0M170 65h0M177 65h0M184 65h0M191 65h0M198 65h0M205 65h0M212 65h0M219 65h0M226 65h0M233 65h0M240 65h0M247 65h0M253 65h0M281 65h0M288 65h0M295 65h0M302 65h0M309 65h0M316 65h0M323 65h0M490 65h0M524 65h0M538 65h0M545 65h0M559 65h0M566 65h0M573 65h0M580 65h0M587 65h0M594 65h0M601 65h0M608 65h0M615 65h0M622 65h0M628 65h0M635 65h0M642 65h0M649 65h0M656 65h0M663 65h0M670 65h0M677 65h0M684 65h0M691 65h0M698 65h0M705 65h0M712 65h0M719 65h0M726 65h0M733 65h0M740 65h0M747 65h0M753 65h0M760 65h0M767 65h0M774 65h0M781 65h0M788 65h0M795 65h0M802 65h0M809 65h0M816 65h0M823 65h0M830 65h0M837 65h0M844 65h0M851 65h0M858 65h0M865 65h0M872 65h0M878 65h0M934 65h0M941 65h0M948 65h0M135 72h0M142 72h0M149 72h0M156 72h0M163 72h0M170 72h0M177 72h0M184 72h0M191 72h0M198 72h0M205 72h0M212 72h0M219 72h0M226 72h0M233 72h0M240 72h0M247 72h0M253 72h0M260 72h0M281 72h0M288 72h0M295 72h0M302 72h0M309 72h0M316 72h0M323 72h0M330 72h0M337 72h0M476 72h0M483 72h0M497 72h0M524 72h0M531 72h0M538 72h0M545 72h0M552 72h0M559 72h0M566 72h0M573 72h0M580 72h0M587 72h0M594 72h0M601 72h0M608 72h0M615 72h0M622 72h0M628 72h0M635 72h0M642 72h0M649 72h0M656 72h0M663 72h0M670 72h0M677 72h0M684 72h0M691 72h0M698 72h0M705 72h0M712 72h0M719 72h0M726 72h0M733 72h0M740 72h0M747 72h0M753 72h0M760 72h0M767 72h0M774 72h0M781 72h0M788 72h0M795 72h0M802 72h0M809 72h0M816 72h0M823 72h0M830 72h0M837 72h0M844 72h0M851 72h0M858 72h0M865 72h0M872 72h0M934 72h0M941 72h0M149 79h0M156 79h0M163 79h0M170 79h0M177 79h0M184 79h0M191 79h0M198 79h0M205 79h0M212 79h0M219 79h0M226 79h0M233 79h0M240 79h0M247 79h0M253 79h0M260 79h0M267 79h0M274 79h0M281 79h0M288 79h0M295 79h0M302 79h0M309 79h0M316 79h0M323 79h0M330 79h0M337 79h0M490 79h0M497 79h0M503 79h0M510 79h0M517 79h0M524 79h0M531 79h0M538 79h0M545 79h0M552 79h0M559 79h0M566 79h0M573 79h0M580 79h0M587 79h0M594 79h0M601 79h0M608 79h0M615 79h0M622 79h0M628 79h0M635 79h0M642 79h0M649 79h0M656 79h0M663 79h0M670 79h0M677 79h0M684 79h0M691 79h0M698 79h0M705 79h0M712 79h0M719 79h0M726 79h0M733 79h0M740 79h0M747 79h0M753 79h0M760 79h0M767 79h0M774 79h0M781 79h0M788 79h0M795 79h0M802 79h0M809 79h0M816 79h0M823 79h0M830 79h0M837 79h0M844 79h0M851 79h0M858 79h0M865 79h0M872 79h0M878 79h0M885 79h0M934 79h0M163 86h0M170 86h0M177 86h0M184 86h0M191 86h0M198 86h0M205 86h0M212 86h0M219 86h0M226 86h0M233 86h0M240 86h0M247 86h0M253 86h0M260 86h0M267 86h0M274 86h0M281 86h0M288 86h0M295 86h0M302 86h0M309 86h0M316 86h0M323 86h0M330 86h0M337 86h0M344 86h0M351 86h0M497 86h0M503 86h0M510 86h0M517 86h0M524 86h0M531 86h0M538 86h0M545 86h0M552 86h0M559 86h0M566 86h0M573 86h0M580 86h0M587 86h0M594 86h0M601 86h0M608 86h0M615 86h0M622 86h0M628 86h0M635 86h0M642 86h0M649 86h0M656 86h0M663 86h0M670 86h0M677 86h0M684 86h0M691 86h0M698 86h0M705 86h0M712 86h0M719 86h0M726 86h0M733 86h0M740 86h0M747 86h0M753 86h0M760 86h0M767 86h0M774 86h0M781 86h0M788 86h0M795 86h0M802 86h0M809 86h0M816 86h0M823 86h0M830 86h0M837 86h0M844 86h0M851 86h0M858 86h0M865 86h0M872 86h0M878 86h0M885 86h0M156 93h0M163 93h0M170 93h0M177 93h0M184 93h0M191 93h0M198 93h0M205 93h0M212 93h0M219 93h0M226 93h0M233 93h0M240 93h0M247 93h0M253 93h0M260 93h0M267 93h0M274 93h0M281 93h0M288 93h0M295 93h0M302 93h0M309 93h0M316 93h0M323 93h0M497 93h0M503 93h0M510 93h0M517 93h0M524 93h0M531 93h0M538 93h0M545 93h0M552 93h0M559 93h0M566 93h0M573 93h0M580 93h0M587 93h0M594 93h0M601 93h0M608 93h0M615 93h0M622 93h0M628 93h0M635 93h0M642 93h0M649 93h0M656 93h0M663 93h0M670 93h0M677 93h0M684 93h0M691 93h0M698 93h0M705 93h0M712 93h0M719 93h0M726 93h0M733 93h0M740 93h0M747 93h0M753 93h0M760 93h0M767 93h0M774 93h0M781 93h0M788 93h0M795 93h0M802 93h0M809 93h0M816 93h0M823 93h0M830 93h0M837 93h0M844 93h0M851 93h0M858 93h0M865 93h0M872 93h0M878 93h0M156 100h0M163 100h0M170 100h0M177 100h0M184 100h0M191 100h0M198 100h0M205 100h0M212 100h0M219 100h0M226 100h0M233 100h0M240 100h0M247 100h0M253 100h0M260 100h0M267 100h0M274 100h0M281 100h0M288 100h0M295 100h0M302 100h0M309 100h0M497 100h0M503 100h0M510 100h0M517 100h0M524 100h0M531 100h0M545 100h0M552 100h0M559 100h0M566 100h0M573 100h0M580 100h0M587 100h0M594 100h0M601 100h0M608 100h0M615 100h0M622 100h0M628 100h0M635 100h0M642 100h0M649 100h0M656 100h0M663 100h0M670 100h0M677 100h0M684 100h0M691 100h0M698 100h0M705 100h0M712 100h0M719 100h0M726 100h0M733 100h0M740 100h0M747 100h0M753 100h0M760 100h0M767 100h0M774 100h0M781 100h0M788 100h0M795 100h0M802 100h0M809 100h0M816 100h0M823 100h0M830 100h0M837 100h0M844 100h0M851 100h0M858 100h0M865 100h0M872 100h0M892 100h0M899 100h0M156 107h0M163 107h0M170 107h0M177 107h0M184 107h0M191 107h0M198 107h0M205 107h0M212 107h0M219 107h0M226 107h0M233 107h0M240 107h0M247 107h0M253 107h0M260 107h0M267 107h0M274 107h0M281 107h0M288 107h0M295 107h0M302 107h0M476 107h0M483 107h0M490 107h0M497 107h0M503 107h0M538 107h0M559 107h0M566 107h0M573 107h0M580 107h0M587 107h0M594 107h0M601 107h0M608 107h0M615 107h0M622 107h0M628 107h0M635 107h0M642 107h0M649 107h0M656 107h0M663 107h0M670 107h0M677 107h0M684 107h0M691 107h0M698 107h0M705 107h0M712 107h0M719 107h0M726 107h0M733 107h0M740 107h0M747 107h0M753 107h0M760 107h0M767 107h0M774 107h0M781 107h0M788 107h0M795 107h0M802 107h0M809 107h0M816 107h0M823 107h0M830 107h0M837 107h0M844 107h0M851 107h0M858 107h0M892 107h0M163 114h0M170 114h0M177 114h0M184 114h0M191 114h0M198 114h0M205 114h0M212 114h0M219 114h0M226 114h0M233 114h0M240 114h0M247 114h0M253 114h0M260 114h0M267 114h0M274 114h0M281 114h0M288 114h0M476 114h0M483 114h0M490 114h0M497 114h0M545 114h0M559 114h0M580 114h0M587 114h0M594 114h0M601 114h0M608 114h0M615 114h0M622 114h0M628 114h0M635 114h0M642 114h0M649 114h0M656 114h0M663 114h0M670 114h0M677 114h0M684 114h0M691 114h0M698 114h0M705 114h0M712 114h0M719 114h0M726 114h0M733 114h0M740 114h0M747 114h0M753 114h0M760 114h0M767 114h0M774 114h0M781 114h0M788 114h0M795 114h0M802 114h0M809 114h0M816 114h0M823 114h0M830 114h0M851 114h0M858 114h0M892 114h0M163 121h0M170 121h0M177 121h0M184 121h0M191 121h0M198 121h0M205 121h0M212 121h0M219 121h0M226 121h0M233 121h0M240 121h0M247 121h0M253 121h0M260 121h0M267 121h0M274 121h0M281 121h0M288 121h0M483 121h0M510 121h0M517 121h0M524 121h0M587 121h0M594 121h0M601 121h0M608 121h0M615 121h0M622 121h0M628 121h0M635 121h0M642 121h0M649 121h0M656 121h0M663 121h0M670 121h0M677 121h0M684 121h0M691 121h0M698 121h0M705 121h0M712 121h0M719 121h0M726 121h0M733 121h0M740 121h0M747 121h0M753 121h0M760 121h0M767 121h0M774 121h0M781 121h0M788 121h0M795 121h0M802 121h0M809 121h0M816 121h0M823 121h0M830 121h0M837 121h0M851 121h0M858 121h0M885 121h0M170 128h0M177 128h0M184 128h0M191 128h0M198 128h0M205 128h0M212 128h0M219 128h0M226 128h0M233 128h0M240 128h0M247 128h0M253 128h0M260 128h0M267 128h0M274 128h0M281 128h0M483 128h0M490 128h0M497 128h0M503 128h0M510 128h0M517 128h0M524 128h0M601 128h0M608 128h0M615 128h0M622 128h0M628 128h0M635 128h0M642 128h0M649 128h0M656 128h0M663 128h0M670 128h0M677 128h0M684 128h0M691 128h0M698 128h0M705 128h0M712 128h0M719 128h0M726 128h0M733 128h0M740 128h0M747 128h0M753 128h0M760 128h0M767 128h0M774 128h0M781 128h0M788 128h0M795 128h0M802 128h0M809 128h0M816 128h0M823 128h0M830 128h0M865 128h0M872 128h0M184 135h0M191 135h0M198 135h0M205 135h0M212 135h0M219 135h0M226 135h0M233 135h0M240 135h0M247 135h0M253 135h0M260 135h0M267 135h0M274 135h0M476 135h0M483 135h0M490 135h0M497 135h0M503 135h0M510 135h0M517 135h0M524 135h0M531 135h0M538 135h0M566 135h0M573 135h0M580 135h0M601 135h0M608 135h0M615 135h0M622 135h0M628 135h0M635 135h0M642 135h0M649 135h0M656 135h0M663 135h0M670 135h0M677 135h0M684 135h0M691 135h0M698 135h0M705 135h0M712 135h0M719 135h0M726 135h0M733 135h0M740 135h0M747 135h0M753 135h0M760 135h0M767 135h0M774 135h0M781 135h0M788 135h0M795 135h0M802 135h0M809 135h0M816 135h0M823 135h0M830 135h0M191 142h0M198 142h0M205 142h0M212 142h0M219 142h0M226 142h0M233 142h0M274 142h0M469 142h0M476 142h0M483 142h0M490 142h0M497 142h0M503 142h0M510 142h0M517 142h0M524 142h0M531 142h0M538 142h0M545 142h0M552 142h0M559 142h0M566 142h0M573 142h0M580 142h0M587 142h0M601 142h0M608 142h0M615 142h0M622 142h0M628 142h0M635 142h0M642 142h0M649 142h0M656 142h0M663 142h0M670 142h0M677 142h0M684 142h0M691 142h0M698 142h0M705 142h0M712 142h0M719 142h0M726 142h0M733 142h0M740 142h0M747 142h0M753 142h0M760 142h0M767 142h0M774 142h0M781 142h0M788 142h0M795 142h0M802 142h0M809 142h0M816 142h0M823 142h0M830 142h0M837 142h0M198 148h0M205 148h0M212 148h0M219 148h0M226 148h0M274 148h0M462 148h0M469 148h0M476 148h0M483 148h0M490 148h0M497 148h0M503 148h0M510 148h0M517 148h0M524 148h0M531 148h0M538 148h0M545 148h0M552 148h0M559 148h0M566 148h0M573 148h0M580 148h0M587 148h0M594 148h0M601 148h0M608 148h0M615 148h0M622 148h0M628 148h0M635 148h0M663 148h0M670 148h0M677 148h0M684 148h0M691 148h0M698 148h0M705 148h0M712 148h0M719 148h0M726 148h0M733 148h0M740 148h0M747 148h0M753 148h0M760 148h0M767 148h0M774 148h0M781 148h0M788 148h0M795 148h0M802 148h0M809 148h0M816 148h0M823 148h0M830 148h0M837 148h0M205 155h0M212 155h0M219 155h0M226 155h0M462 155h0M469 155h0M476 155h0M483 155h0M490 155h0M497 155h0M503 155h0M510 155h0M517 155h0M524 155h0M531 155h0M538 155h0M545 155h0M552 155h0M559 155h0M566 155h0M573 155h0M580 155h0M587 155h0M594 155h0M608 155h0M615 155h0M622 155h0M628 155h0M635 155h0M642 155h0M649 155h0M656 155h0M691 155h0M698 155h0M705 155h0M712 155h0M719 155h0M726 155h0M733 155h0M740 155h0M747 155h0M753 155h0M760 155h0M767 155h0M774 155h0M781 155h0M788 155h0M795 155h0M802 155h0M809 155h0M816 155h0M823 155h0M830 155h0M212 162h0M219 162h0M226 162h0M274 162h0M281 162h0M455 162h0M462 162h0M469 162h0M476 162h0M483 162h0M490 162h0M497 162h0M503 162h0M510 162h0M517 162h0M524 162h0M531 162h0M538 162h0M545 162h0M552 162h0M559 162h0M566 162h0M573 162h0M580 162h0M587 162h0M594 162h0M601 162h0M608 162h0M615 162h0M622 162h0M628 162h0M635 162h0M642 162h0M649 162h0M656 162h0M705 162h0M712 162h0M719 162h0M726 162h0M733 162h0M740 162h0M753 162h0M760 162h0M767 162h0M774 162h0M781 162h0M788 162h0M795 162h0M802 162h0M809 162h0M219 169h0M226 169h0M233 169h0M253 169h0M455 169h0M462 169h0M469 169h0M476 169h0M483 169h0M490 169h0M497 169h0M503 169h0M510 169h0M517 169h0M524 169h0M531 169h0M538 169h0M545 169h0M552 169h0M559 169h0M566 169h0M573 169h0M580 169h0M587 169h0M594 169h0M601 169h0M615 169h0M622 169h0M628 169h0M635 169h0M642 169h0M649 169h0M656 169h0M705 169h0M712 169h0M719 169h0M726 169h0M733 169h0M760 169h0M767 169h0M774 169h0M781 169h0M788 169h0M233 176h0M240 176h0M247 176h0M253 176h0M455 176h0M462 176h0M469 176h0M476 176h0M483 176h0M490 176h0M497 176h0M503 176h0M510 176h0M517 176h0M524 176h0M531 176h0M538 176h0M545 176h0M552 176h0M559 176h0M566 176h0M573 176h0M580 176h0M587 176h0M594 176h0M601 176h0M608 176h0M615 176h0M622 176h0M628 176h0M635 176h0M642 176h0M705 176h0M712 176h0M719 176h0M726 176h0M767 176h0M774 176h0M781 176h0M788 176h0M795 176h0M837 176h0M253 183h0M260 183h0M462 183h0M469 183h0M476 183h0M483 183h0M490 183h0M497 183h0M503 183h0M510 183h0M517 183h0M524 183h0M531 183h0M538 183h0M545 183h0M552 183h0M559 183h0M566 183h0M573 183h0M580 183h0M587 183h0M594 183h0M601 183h0M608 183h0M615 183h0M622 183h0M628 183h0M712 183h0M719 183h0M774 183h0M781 183h0M788 183h0M795 183h0M837 183h0M260 190h0M267 190h0M295 190h0M302 190h0M462 190h0M469 190h0M476 190h0M483 190h0M490 190h0M497 190h0M503 190h0M510 190h0M517 190h0M524 190h0M531 190h0M538 190h0M545 190h0M552 190h0M559 190h0M566 190h0M573 190h0M580 190h0M587 190h0M594 190h0M601 190h0M608 190h0M615 190h0M712 190h0M719 190h0M774 190h0M788 190h0M795 190h0M844 190h0M267 197h0M274 197h0M281 197h0M288 197h0M295 197h0M302 197h0M309 197h0M316 197h0M323 197h0M462 197h0M469 197h0M476 197h0M483 197h0M490 197h0M497 197h0M503 197h0M510 197h0M517 197h0M524 197h0M531 197h0M538 197h0M545 197h0M552 197h0M559 197h0M566 197h0M573 197h0M580 197h0M587 197h0M594 197h0M601 197h0M608 197h0M615 197h0M622 197h0M628 197h0M635 197h0M774 197h0M844 197h0M288 204h0M295 204h0M302 204h0M309 204h0M316 204h0M323 204h0M330 204h0M337 204h0M344 204h0M476 204h0M483 204h0M490 204h0M497 204h0M503 204h0M510 204h0M517 204h0M524 204h0M531 204h0M538 204h0M545 204h0M552 204h0M559 204h0M566 204h0M573 204h0M580 204h0M587 204h0M594 204h0M601 204h0M608 204h0M615 204h0M622 204h0M628 204h0M823 204h0M844 204h0M288 211h0M295 211h0M302 211h0M309 211h0M316 211h0M323 211h0M330 211h0M337 211h0M344 211h0M351 211h0M531 211h0M538 211h0M545 211h0M552 211h0M559 211h0M566 211h0M573 211h0M580 211h0M587 211h0M594 211h0M601 211h0M608 211h0M615 211h0M622 211h0M628 211h0M767 211h0M781 211h0M816 211h0M823 211h0M281 218h0M288 218h0M295 218h0M302 218h0M309 218h0M316 218h0M323 218h0M330 218h0M337 218h0M344 218h0M351 218h0M358 218h0M531 218h0M538 218h0M545 218h0M552 218h0M559 218h0M566 218h0M573 218h0M580 218h0M587 218h0M594 218h0M601 218h0M608 218h0M615 218h0M622 218h0M774 218h0M809 218h0M816 218h0M823 218h0M281 225h0M288 225h0M295 225h0M302 225h0M309 225h0M316 225h0M323 225h0M330 225h0M337 225h0M344 225h0M351 225h0M358 225h0M365 225h0M531 225h0M538 225h0M545 225h0M552 225h0M559 225h0M566 225h0M573 225h0M580 225h0M587 225h0M594 225h0M601 225h0M608 225h0M615 225h0M781 225h0M788 225h0M809 225h0M816 225h0M823 225h0M281 232h0M288 232h0M295 232h0M302 232h0M309 232h0M316 232h0M323 232h0M330 232h0M337 232h0M344 232h0M351 232h0M358 232h0M365 232h0M372 232h0M378 232h0M385 232h0M531 232h0M538 232h0M545 232h0M552 232h0M559 232h0M566 232h0M573 232h0M580 232h0M587 232h0M594 232h0M601 232h0M608 232h0M788 232h0M816 232h0M872 232h0M878 232h0M885 232h0M892 232h0M281 239h0M288 239h0M295 239h0M302 239h0M309 239h0M316 239h0M323 239h0M330 239h0M337 239h0M344 239h0M351 239h0M358 239h0M365 239h0M372 239h0M378 239h0M385 239h0M392 239h0M399 239h0M538 239h0M545 239h0M552 239h0M559 239h0M566 239h0M573 239h0M580 239h0M587 239h0M594 239h0M601 239h0M608 239h0M878 239h0M885 239h0M892 239h0M899 239h0M906 239h0M281 246h0M288 246h0M295 246h0M302 246h0M309 246h0M316 246h0M323 246h0M330 246h0M337 246h0M344 246h0M351 246h0M358 246h0M365 246h0M372 246h0M378 246h0M385 246h0M392 246h0M399 246h0M538 246h0M545 246h0M552 246h0M559 246h0M566 246h0M573 246h0M580 246h0M587 246h0M594 246h0M601 246h0M608 246h0M892 246h0M899 246h0M906 246h0M288 253h0M295 253h0M302 253h0M309 253h0M316 253h0M323 253h0M330 253h0M337 253h0M344 253h0M351 253h0M358 253h0M365 253h0M372 253h0M378 253h0M385 253h0M392 253h0M538 253h0M545 253h0M552 253h0M559 253h0M566 253h0M573 253h0M580 253h0M587 253h0M594 253h0M601 253h0M608 253h0M288 259h0M295 259h0M302 259h0M309 259h0M316 259h0M323 259h0M330 259h0M337 259h0M344 259h0M351 259h0M358 259h0M365 259h0M372 259h0M378 259h0M385 259h0M392 259h0M538 259h0M545 259h0M552 259h0M559 259h0M566 259h0M573 259h0M580 259h0M587 259h0M594 259h0M601 259h0M608 259h0M635 259h0M865 259h0M872 259h0M892 259h0M899 259h0M302 266h0M309 266h0M316 266h0M323 266h0M330 266h0M337 266h0M344 266h0M351 266h0M358 266h0M365 266h0M372 266h0M378 266h0M385 266h0M538 266h0M545 266h0M552 266h0M559 266h0M566 266h0M573 266h0M580 266h0M587 266h0M594 266h0M601 266h0M608 266h0M628 266h0M635 266h0M851 266h0M858 266h0M865 266h0M872 266h0M878 266h0M892 266h0M899 266h0M309 273h0M316 273h0M323 273h0M330 273h0M337 273h0M344 273h0M351 273h0M358 273h0M365 273h0M372 273h0M378 273h0M385 273h0M538 273h0M545 273h0M552 273h0M559 273h0M566 273h0M573 273h0M580 273h0M587 273h0M594 273h0M601 273h0M628 273h0M635 273h0M837 273h0M844 273h0M851 273h0M858 273h0M865 273h0M872 273h0M878 273h0M885 273h0M892 273h0M899 273h0M309 280h0M316 280h0M323 280h0M330 280h0M337 280h0M344 280h0M351 280h0M358 280h0M365 280h0M372 280h0M378 280h0M385 280h0M538 280h0M545 280h0M552 280h0M559 280h0M566 280h0M573 280h0M580 280h0M587 280h0M594 280h0M622 280h0M628 280h0M635 280h0M823 280h0M830 280h0M837 280h0M844 280h0M851 280h0M858 280h0M865 280h0M872 280h0M878 280h0M885 280h0M892 280h0M899 280h0M906 280h0M309 287h0M316 287h0M323 287h0M330 287h0M337 287h0M344 287h0M351 287h0M358 287h0M365 287h0M372 287h0M378 287h0M545 287h0M552 287h0M559 287h0M566 287h0M573 287h0M580 287h0M587 287h0M594 287h0M628 287h0M823 287h0M830 287h0M837 287h0M844 287h0M851 287h0M858 287h0M865 287h0M872 287h0M878 287h0M885 287h0M892 287h0M899 287h0M906 287h0M913 287h0M309 294h0M316 294h0M323 294h0M330 294h0M337 294h0M344 294h0M351 294h0M358 294h0M365 294h0M545 294h0M552 294h0M559 294h0M566 294h0M573 294h0M580 294h0M587 294h0M816 294h0M823 294h0M830 294h0M837 294h0M844 294h0M851 294h0M858 294h0M865 294h0M872 294h0M878 294h0M885 294h0M892 294h0M899 294h0M906 294h0M913 294h0M920 294h0M302 301h0M309 301h0M316 301h0M323 301h0M330 301h0M337 301h0M344 301h0M351 301h0M358 301h0M365 301h0M552 301h0M559 301h0M566 301h0M573 301h0M580 301h0M823 301h0M830 301h0M837 301h0M844 301h0M851 301h0M858 301h0M865 301h0M872 301h0M878 301h0M885 301h0M892 301h0M899 301h0M906 301h0M913 301h0M920 301h0M302 308h0M309 308h0M316 308h0M323 308h0M330 308h0M337 308h0M344 308h0M351 308h0M358 308h0M552 308h0M559 308h0M566 308h0M573 308h0M580 308h0M823 308h0M830 308h0M837 308h0M844 308h0M851 308h0M858 308h0M865 308h0M872 308h0M878 308h0M885 308h0M892 308h0M899 308h0M906 308h0M913 308h0M920 308h0M302 315h0M309 315h0M316 315h0M323 315h0M330 315h0M337 315h0M344 315h0M351 315h0M552 315h0M559 315h0M566 315h0M573 315h0M823 315h0M830 315h0M837 315h0M844 315h0M878 315h0M885 315h0M892 315h0M899 315h0M906 315h0M913 315h0M920 315h0M302 322h0M309 322h0M316 322h0M323 322h0M330 322h0M337 322h0M885 322h0M892 322h0M899 322h0M906 322h0M913 322h0M983 322h0M302 329h0M309 329h0M316 329h0M323 329h0M330 329h0M337 329h0M899 329h0M906 329h0M983 329h0M990 329h0M302 336h0M309 336h0M316 336h0M295 343h0M302 343h0M309 343h0M316 343h0M969 343h0M976 343h0M295 350h0M302 350h0M309 350h0M316 350h0M969 350h0M295 357h0M302 357h0M309 357h0M295 364h0M302 364h0M302 371h0M309 371h0"/><g class="pin" data-i="0"><circle class="ring" cx="172" cy="128" r="13"/><circle cx="172" cy="128" r="5"/><title>Los Angeles, United States</title></g><g class="pin" data-i="1"><circle class="ring" cx="294" cy="109" r="13"/><circle cx="294" cy="109" r="5"/><title>New York, United States</title></g><g class="pin" data-i="2"><circle class="ring" cx="500" cy="79" r="13"/><circle cx="500" cy="79" r="5"/><title>London, United Kingdom</title></g><g class="pin" data-i="3"><circle class="ring" cx="602" cy="226" r="13"/><circle cx="602" cy="226" r="5"/><title>Nairobi, Kenya</title></g><g class="pin" data-i="4"><circle class="ring" cx="702" cy="169" r="13"/><circle cx="702" cy="169" r="5"/><title>Mumbai, India</title></g><g class="pin" data-i="5"><circle class="ring" cx="920" cy="316" r="13"/><circle cx="920" cy="316" r="5"/><title>Sydney, Australia</title></g></svg>
+          <p class="small">Sample locations for the design preview.</p>
+        </div>
+        <ul class="places"><li data-i="0"><strong>Los Angeles</strong><span>United States</span></li><li data-i="1"><strong>New York</strong><span>United States</span></li><li data-i="2"><strong>London</strong><span>United Kingdom</span></li><li data-i="3"><strong>Nairobi</strong><span>Kenya</span></li><li data-i="4"><strong>Mumbai</strong><span>India</span></li><li data-i="5"><strong>Sydney</strong><span>Australia</span></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="two light">
+    <div class="wrap">
+      <div class="panel">
+        <svg class="pic" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2540"/><stop offset=".7" stop-color="#8d8f6b"/><stop offset="1" stop-color="#e2c98f"/></linearGradient></defs><rect width="400" height="150" fill="url(#s2)"/><circle cx="270" cy="92" r="30" fill="#eee4d4"/><path d="M0 105C70 80 140 112 220 100S340 85 400 102V150H0Z" fill="#66794a"/><path d="M0 130C80 112 170 136 250 126S350 118 400 130V150H0Z" fill="#2e3a22"/><rect x="92" y="88" width="4" height="30" fill="#1b2216"/><circle cx="94" cy="80" r="17" fill="#1b2216"/><circle cx="82" cy="90" r="11" fill="#1b2216"/><circle cx="106" cy="90" r="11" fill="#1b2216"/></svg>
+        <h2>Shane's story</h2>
+        <p>How Shane's story shaped this foundation.</p>
+        <a class="btn ghost" href="https://shanefoundation.org/shanes-story">Read Shane's story</a>
+      </div>
+      <div class="panel">
+        <svg class="pic" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="150" fill="#12172b"/><circle cx="90" cy="60" r="70" fill="#9aab6a" opacity=".10"/><circle cx="300" cy="100" r="85" fill="#66794a" opacity=".16"/><g stroke="#9aab6a" stroke-opacity=".6" stroke-width="1.2"><line x1="40" y1="40" x2="110" y2="95"/><line x1="110" y1="95" x2="170" y2="35"/><line x1="170" y1="35" x2="240" y2="80"/><line x1="240" y1="80" x2="310" y2="40"/><line x1="310" y1="40" x2="360" y2="105"/><line x1="240" y1="80" x2="200" y2="125"/><line x1="110" y1="95" x2="60" y2="120"/><line x1="200" y1="125" x2="280" y2="125"/><line x1="360" y1="105" x2="280" y2="125"/><line x1="40" y1="40" x2="170" y2="35"/><line x1="110" y1="95" x2="200" y2="125"/></g><g fill="#eee4d4"><circle cx="40" cy="40" r="5"/><circle cx="110" cy="95" r="7"/><circle cx="170" cy="35" r="5"/><circle cx="240" cy="80" r="9"/><circle cx="310" cy="40" r="5"/><circle cx="360" cy="105" r="6"/><circle cx="200" cy="125" r="5"/><circle cx="60" cy="120" r="4"/><circle cx="280" cy="125" r="6"/></g></svg>
+        <h2>Research</h2>
+        <p>The studies we back and what they are finding.</p>
+        <a class="btn ghost" href="https://shanefoundation.org/research">See the research</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div>
+        <h2 id="contact-h">Tell us your story or send a question</h2>
+        <p>Send us a note and we'll reply.</p>
+      </div>
+      <!-- Connect this form to your handler (Formspree, Netlify Forms, your own endpoint). -->
+      <form id="form" action="#" method="post">
+        <label>Name <input name="name" autocomplete="name"></label>
+        <label>Email (required) <input name="email" type="email" required autocomplete="email"></label>
+        <label>Message <textarea name="message"></textarea></label>
+        <p class="small">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+        <div><button class="btn sun" type="submit" style="cursor:pointer">Send message</button></div>
+        <div id="sent" role="status">Thank you. Your message was sent.</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="donate" aria-labelledby="donate-h">
+    <svg class="hills" viewBox="0 0 1000 140" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70C150 20 300 90 480 60S800 20 1000 70V140H0Z" fill="#55663a" opacity=".35"/><path d="M0 105C180 70 320 120 520 98S820 70 1000 104V140H0Z" fill="#0d1120" opacity=".8"/></svg>
+    <div class="wrap">
+      <h2 id="donate-h">Help us do more</h2>
+      <div class="row">
+        <a class="btn sun" href="https://givebutter.com/vVBrS0">Donate now</a>
+        <a class="btn ghost" href="https://www.instagram.com/theshanefoundation/">Follow us on Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <strong>The Shane Foundation</strong>
+    </div>
+    <div>
+      <ul>
+        <li><a href="https://shanefoundation.org/birth-control-clot-risks">Birth control</a></li>
+        <li><a href="https://shanefoundation.org/pregnancy-clot-risks">Pregnancy</a></li>
+        <li><a href="https://shanefoundation.org/fetal-health-clot-risks">Fetal health</a></li>
+        <li><a href="https://shanefoundation.org/research">Research</a></li>
+        <li><a href="https://shanefoundation.org/shanes-story">Shane's story</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61560101334852">Facebook</a></li>
+        <li><a href="https://www.instagram.com/theshanefoundation/">Instagram</a></li>
+      </ul>
+      <p>&copy; 2026 The Shane Foundation. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  var sub=document.getElementById('sub'),sb=sub.querySelector('button');
+  sb.addEventListener('click',function(){var o=sub.classList.toggle('open');sb.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',function(e){if(!sub.contains(e.target)){sub.classList.remove('open');sb.setAttribute('aria-expanded','false')}});
+  var pins=document.querySelectorAll('.pin');
+  document.querySelectorAll('.places li').forEach(function(li){var p=pins[li.dataset.i];li.addEventListener('mouseenter',function(){p.classList.add('on')});li.addEventListener('mouseleave',function(){p.classList.remove('on')})});
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault(); /* replace with a real submit to your form handler */
+    document.getElementById('sent').style.display='block';
+  });
+})();
+</script>
+</body>
+</html>
