@@ -60,11 +60,6 @@ Open `index.html` in your browser. The fonts load from Google Fonts, so an inter
 
 Crafted by Jaffery / [JFUIX](https://github.com/JFUIX). This is an unofficial concept redesign and a draft, not the foundation's live site. The page text is reworded, the map and illustrations are original, and the map locations are placeholders. Fonts are Newsreader and DM Sans from Google Fonts.<div align="center">
 
-<img src="screenshot/hero.png" alt="The Shane Foundation homepage redesign" width="100%">
-
-# The Shane Foundation Homepage Redesign
-
-**Know the risk. Know the signs.**
 
 A dark, editorial homepage concept for a nonprofit raising awareness of blood clot risks linked to birth control and pregnancy, with topic pages, a warning signs call to action, a "where we operate" map and a contact form.
 
